@@ -15,12 +15,13 @@ h2
   display: flex
   flex-direction: column
   align-items: center
+  width: 100%
 
 .header
   display: flex
   flex-direction: column
   background-color: darkred
-  margin: 0 auto
+  margin: 10px auto
 
 .header__marquee
   color: blueviolet
@@ -30,8 +31,34 @@ h2
 .image__wrapper
   display: flex
   align-items: center
+  justify-content: center
+  flex: 1 1 auto
   margin: 10px 0 0 0
+  max-width: 100%
+  @media screen and (max-width: 900px)
+    flex-direction: column
 
 .image
   box-shadow: 3px 3px 0 #ac0a37
   margin: 0 5px
+  display: flex
+  width: 30%
+  &.text
+    width: auto
+    @media screen and (max-width: 900px)
+      width: 100%
+  &.horisontal
+    @media screen and (max-width: 900px)
+      display: none
+
+
+  @media screen and (max-width: 900px)
+    width: 100%
+
+iframe
+  width: 600px
+  height: 400px
+  @media screen and (max-width: 900px)
+    max-height: 300px
+    width: 100%
+
